@@ -20,6 +20,18 @@ export default defineType({
             },
         }),
         defineField({
+            name: 'status',
+            title: 'Status',
+            type: 'string',
+            options: {
+                list: [
+                    { title: 'Aktiv', value: 'active' },
+                    { title: 'Noe aktivitet', value: 'some-activity' },
+                    { title: 'Inaktiv', value: 'inactive' },
+                ],
+            },
+        }),
+        defineField({
             name: 'logo',
             title: 'Logo',
             type: 'image',
@@ -43,6 +55,27 @@ export default defineType({
                     lists: [],
                 },
             ],
+        }),
+        defineField({
+            name: 'series',
+            title: 'Beltar i serier:',
+            type: 'array',
+            of: [{ type: 'reference', to: [{ type: 'series' }] }],
+        }),
+        defineField({
+            name: 'facebook',
+            title: 'Facebook Lenke',
+            type: 'url',
+            //only facebook domain alloed
+            validation: (Rule) =>
+                Rule.uri({ scheme: ['https', 'http'] }).custom((uri) =>
+                    uri?.includes('facebook.com') || !uri ? true : 'Må være en facebook lenke'
+                ),
+        }),
+        defineField({
+            name: 'website',
+            title: 'Hjemmeside Lenke',
+            type: 'url',
         }),
     ],
     preview: {
