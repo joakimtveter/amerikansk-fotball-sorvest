@@ -17,6 +17,12 @@
     --color-text-secondary: hsla(0, 0%, 0%, 0.6);
     --color-text-disabled: hsla(0, 0%, 0%, 0.38);
 
+    --color-success: #4caf50;
+    --color-success-bg: #4caf50;
+    --color-error: #f44336;
+    --color-warning: #ff9800;
+    --color-info: #2196f3;
+
     --box-shadow-100: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     --box-shadow-200: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
     --box-shadow-300: 0 10px 20px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1);
