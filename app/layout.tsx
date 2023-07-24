@@ -1,6 +1,19 @@
-import type { Metadata } from 'next';
+import { Open_Sans, Lato } from 'next/font/google';
 
+import type { Metadata } from 'next';
 import './globals.css';
+
+const openSans = Open_Sans({
+    subsets: ['latin'],
+    variable: '--ff-body',
+});
+
+const lato = Lato({
+    weight: ['300', '700'],
+    style: ['normal'],
+    subsets: ['latin'],
+    variable: '--ff-heading',
+});
 
 export const metadata: Metadata = {
     applicationName: 'Amerikansk fotball i Sørvest Norge - AFSV',
@@ -15,7 +28,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang='no'>
-            <body>{children}</body>
+            <body className={`${openSans.variable} ${lato.variable}`}>{children}</body>
         </html>
     );
 }

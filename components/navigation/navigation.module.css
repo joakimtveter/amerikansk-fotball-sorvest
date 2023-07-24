@@ -1,0 +1,21 @@
+.navlist {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navitem {
+    margin-inline-start: 1rem;
+}
+
+.navlink {
+    font-family: var(--ff-heading);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration-thickness: 1.75px !important;
+}
+
+.navlink:hover {
+    text-decoration: underline;
+}

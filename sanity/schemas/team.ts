@@ -8,11 +8,13 @@ export default defineType({
         defineField({
             name: 'name',
             title: 'Lagnavn',
+            description: 'Navnet på laget, ikke klubbnavnet. F.eks. "Lura Bulls" ikke "Lura IL"',
             type: 'string',
         }),
         defineField({
             name: 'slug',
             title: 'Slug',
+            description: 'Dette er en unik identifikator for laget. Denne brukes i URLen til laget.',
             type: 'slug',
             options: {
                 source: 'name',
@@ -22,13 +24,10 @@ export default defineType({
         defineField({
             name: 'status',
             title: 'Status',
+            description: 'Hvor aktivt laget er',
             type: 'string',
             options: {
-                list: [
-                    { title: 'Aktiv', value: 'active' },
-                    { title: 'Noe aktivitet', value: 'some-activity' },
-                    { title: 'Inaktiv', value: 'inactive' },
-                ],
+                list: ['Aktiv', 'Noe aktivitet', 'Inaktiv'],
             },
         }),
         defineField({
@@ -76,6 +75,26 @@ export default defineType({
             name: 'website',
             title: 'Hjemmeside Lenke',
             type: 'url',
+        }),
+        defineField({
+            name: 'location',
+            title: 'By',
+            type: 'string',
+        }),
+        defineField({
+            name: 'address',
+            title: 'Adresse',
+            type: 'string',
+        }),
+        defineField({
+            name: 'phonenumber',
+            title: 'Telefon',
+            type: 'string',
+        }),
+        defineField({
+            name: 'email',
+            title: 'Epost',
+            type: 'string',
         }),
     ],
     preview: {

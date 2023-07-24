@@ -1,6 +1,9 @@
 import { groq } from 'next-sanity';
 import { client } from '@/sanity/lib/client';
+import { urlForImage } from '@/sanity/lib/image';
+import norwegianDateTimeString from '@/libs/norwegianDateTimeString';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import ContentWidthWrapper from '@/components/ContentWidthWrapper';
 import Section from '@/components/section';
@@ -14,12 +17,15 @@ async function getData() {
 }
 
 function ArticleCard(props: SanityDocument) {
+    const dateString = norwegianDateTimeString(props._createdAt);
+    const imageUrl = props.mainImage ? urlForImage(props.mainImage).width(200).url() : '';
     return (
         <div>
+            <img src={imageUrl} alt='' />
             <Link href={`/aktuelt/${props.slug.current}`}>
                 <h2>{props.title}</h2>
             </Link>
-            <p>{props._createdAt}</p>
+            <small>{dateString}</small>
         </div>
     );
 }
@@ -33,13 +39,13 @@ export default async function NewsArchivePage() {
             <ContentWidthWrapper>
                 <h1>Aktuelt</h1>
                 <p> Aktuelle artikkler om hva som skjer i regionen.</p>
-                <pre>{JSON.stringify(data, null, 2)}</pre>
             </ContentWidthWrapper>
             <Section>
                 {data.map((article: SanityDocument) => (
                     <ArticleCard key={article._id} {...article} />
                 ))}
             </Section>
+            <pre>{JSON.stringify(data, null, 2)}</pre>
         </main>
     );
 }

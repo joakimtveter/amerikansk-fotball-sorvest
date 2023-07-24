@@ -6,7 +6,8 @@ import post from './schemas/post';
 import author from './schemas/author';
 import team from './schemas/team';
 import series from './schemas/series';
+import person from './schemas/person';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-    types: [post, team, series, author, category, blockContent],
+    types: [post, team, series, person, author, category, blockContent],
 };

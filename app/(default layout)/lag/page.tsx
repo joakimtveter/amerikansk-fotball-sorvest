@@ -20,7 +20,7 @@ interface TeamCardProps {
 }
 
 function TeamCard(props: SanityDocument) {
-    const imageUrl = urlForImage(props.logo).width(200).url();
+    const imageUrl = props.logo ? urlForImage(props.logo).width(200).url() : '';
 
     return (
         <div>

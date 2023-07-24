@@ -1,15 +1,14 @@
 import styles from './footer.module.css';
+import copyrightYears from '@/libs/copyrightYears';
 
 export default function Footer() {
-    const currentYear = new Date().getFullYear();
-    const startYear = 2020;
-    const copyrightYears = currentYear === startYear ? currentYear : `${startYear} - ${currentYear}`;
+    const copyright = copyrightYears(2023);
 
     return (
         <footer>
             <div>
-                <p>
-                    &copy; {copyrightYears} <a href='https://lurabulls.no'>Lura Bulls</a>. Denne siden er utviklet av{' '}
+                <p className={styles.copyright}>
+                    &copy;{copyright} <a href='https://lurabulls.no'>Lura Bulls</a> | Denne siden er utviklet av{' '}
                     <a href='https://joakimtveter.no'>Joakim Tveter</a>
                 </p>
             </div>

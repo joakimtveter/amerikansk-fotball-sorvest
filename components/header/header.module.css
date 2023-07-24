@@ -1,3 +1,11 @@
 .header {
-    background-color: hotpink;
+    padding: 2rem 0.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: var(--header-width);
+    margin-inline: auto;
 }
