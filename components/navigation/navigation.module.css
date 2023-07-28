@@ -13,9 +13,10 @@
     font-family: var(--ff-heading);
     text-transform: uppercase;
     font-weight: 600;
-    text-decoration-thickness: 1.75px !important;
+    text-decoration-thickness: 1.5px !important;
 }
 
 .navlink:hover {
     text-decoration: underline;
+    color: var(--color-primary-900);
 }

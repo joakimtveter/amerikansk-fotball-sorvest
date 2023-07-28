@@ -1,0 +1,166 @@
+.contained {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: inherit;
+    font-weight: 600;
+    padding: 0.6em 1em;
+    border-radius: 0.3em;
+    border: 0.1em solid transparent;
+    margin-inline: 0.25rem;
+}
+
+.contained.primary {
+    background-color: var(--color-primary-500);
+}
+
+.contained.neutral {
+    background-color: var(--color-neutral-300);
+}
+
+.contained.success {
+    background-color: var(--color-success);
+}
+
+.contained.error {
+    color: var(--color-light-text);
+    background-color: var(--color-error);
+}
+
+.contained.warning {
+    background-color: var(--color-warning);
+}
+
+.contained.gradient {
+    color: var(--color-light-text);
+    background-image: var(--color-gradient-100);
+}
+
+.contained:hover {
+    box-shadow: 2px 1000px 1px #ffffff33 inset;
+}
+
+.outlined {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: inherit;
+    font-weight: 600;
+    padding: 0.4em 0.8em;
+    border-radius: 0.3em;
+    border: 0.3em solid var(--border-color);
+    margin-inline: 0.25rem;
+    background-color: #fff;
+}
+
+.outlined.primary {
+    --border-color: var(--color-primary-500);
+}
+
+.outlined.primary:hover {
+    background-color: var(--color-primary-500);
+}
+
+.outlined.neutral {
+    --border-color: var(--color-neutral-300);
+}
+
+.outlined.neutral:hover {
+    background-color: var(--color-neutral-300);
+}
+
+.outlined.success {
+    --border-color: var(--color-success);
+}
+
+.outlined.success:hover {
+    background-color: var(--color-success);
+}
+
+.outlined.error {
+    --border-color: var(--color-error);
+}
+
+.outlined.error:hover {
+    color: var(--color-light-text);
+    background-color: var(--color-error);
+}
+
+.outlined.warning {
+    --border-color: var(--color-warning);
+}
+
+.outlined.warning:hover {
+    background-color: var(--color-warning);
+}
+
+.outlined.gradient {
+    border: 0.3em solid transparent;
+    background-image: var(--color-gradient-100);
+    background-origin: border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+}
+
+.outlined.gradient:hover {
+    box-shadow: none;
+    color: white;
+}
+
+.text {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: inherit;
+    font-weight: 600;
+    padding: 0.4em 0.8em;
+    border: 0;
+    margin-inline: 0.25rem;
+    background-color: transparent;
+}
+
+.text.primary {
+    color: var(--color-primary-500);
+}
+
+.text.primary:hover {
+    background-color: var(--color-primary-050);
+}
+
+.text.neutral {
+    color: var(--color-neutral-500);
+}
+
+.text.neutral:hover {
+    background-color: var(--color-neutral-050);
+}
+
+.text.success {
+    color: var(--color-success);
+}
+
+.text.success:hover {
+    background-color: var(--color-success);
+}
+
+.text.error {
+    color: var(--color-error);
+}
+
+.text.error:hover {
+    color: var(--color-light-text);
+    background-color: var(--color-error);
+}
+
+.text.warning {
+    --border-color: var(--color-warning);
+}
+
+.text.warning:hover {
+    background-color: var(--color-warning);
+}
+
+.text.gradient {
+    background-image: var(--color-gradient-100);
+    box-shadow: 2px 1000px 1px #fff inset;
+}
+
+.text.gradient:hover {
+    box-shadow: 2px 1000px 1px #ffffff95 inset;
+}

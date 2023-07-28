@@ -1,7 +1,7 @@
 .header {
     padding: 2rem 0.5rem;
-    border-bottom: 2px solid lightgrey;
-    margin-bottom: 2rem;
+    border-top: 6px solid var(--color-primary-600);
+    background-color: var(--color-primary-050);
 }
 
 .container {
